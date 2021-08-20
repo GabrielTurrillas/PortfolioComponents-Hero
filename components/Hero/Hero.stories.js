@@ -2,7 +2,7 @@ import Hero from './Hero';
 import StoryRouter from 'storybook-react-router';
 
 export default {
-  title: 'Sections/Hero',
+  title: 'Screens/Hero',
   component: Hero,
   decorators: [StoryRouter()],
 };

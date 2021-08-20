@@ -1,14 +1,14 @@
 import React from "react";
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { colors } from '../styles/sylesVariables'
+import { colors } from '../../styles/sylesVariables'
 
 const Hero = ({ english }) => {
   return (
     <Containter>
       {console.log(english)}
       <HeroBg>
-        <VideoBg autoPlay loop muted src='https://portafoliosvideobackground.s3.amazonaws.com/video.mp4' type='video/mp4' />
+        <VideoBg autoPlay loop muted /* src='https://portafoliosvideobackground.s3.amazonaws.com/video.mp4' */ type='video/mp4' />
       </HeroBg>
       <Grid>
         <TextArea>

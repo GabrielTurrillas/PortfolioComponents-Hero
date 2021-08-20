@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors, GlobalStyles, device } from '../styles';
+import { colors, GlobalStyles, device } from '../../styles';
+import PrimaryButton from '../PrimaryButton/PrimaryButton';
 
-const HeroMovileFirst = ({ english, engButtonText, buttonText }) => {
+const HeroMovileFirst = ({ english, engButtonText, buttonText, contactUrl }) => {
   return (
     <>
       <GlobalStyles />
@@ -24,7 +25,7 @@ const HeroMovileFirst = ({ english, engButtonText, buttonText }) => {
             }
           </TextArea>
           <ButtonArea>
-            ButtonArea
+            <PrimaryButton english={english} engButtonText={engButtonText} buttonText={buttonText} contactUrl={contactUrl} />
           </ButtonArea>
         </Grid>
       </Container>
@@ -32,7 +33,7 @@ const HeroMovileFirst = ({ english, engButtonText, buttonText }) => {
   )
 }
 
-export default HeroMovileFirst
+export default HeroMovileFirst;
 
 const Container = styled.div`
   position:relative;
@@ -93,7 +94,4 @@ const ButtonArea = styled.div`
   z-index:999;
 `
 
-const PrimryButton = styled(Link)`
-
-`
 
