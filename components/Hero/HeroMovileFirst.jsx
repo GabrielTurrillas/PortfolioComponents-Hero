@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors, GlobalStyles, device } from '../../styles';
+import { colors, GlobalStyles, device, externalPadding } from '../../styles';
 import PrimaryButton from '../PrimaryButton/PrimaryButton';
 
-const HeroMovileFirst = ({ english, engButtonText, buttonText, contactUrl }) => {
+const HeroMovileFirst = ({ english, engButtonText, buttonText, contactUrl, big }) => {
   return (
     <>
       <GlobalStyles />
@@ -25,7 +25,13 @@ const HeroMovileFirst = ({ english, engButtonText, buttonText, contactUrl }) => 
             }
           </TextArea>
           <ButtonArea>
-            <PrimaryButton english={english} engButtonText={engButtonText} buttonText={buttonText} contactUrl={contactUrl} />
+            <PrimaryButton
+              english={english}
+              engButtonText={engButtonText}
+              buttonText={buttonText}
+              contactUrl={contactUrl}
+              big={big}
+            />
           </ButtonArea>
         </Grid>
       </Container>
@@ -38,6 +44,19 @@ export default HeroMovileFirst;
 const Container = styled.div`
   position:relative;
   height:100vh;
+  padding:0 ${externalPadding.mobileS};
+  @media ${device.mobileL}{
+    padding:0 ${externalPadding.mobileL};
+  }
+  @media ${device.tablet}{
+    padding:0 ${externalPadding.tablet};
+  }
+  @media ${device.laptopL}{
+    padding:0 ${externalPadding.laptopL};
+  }
+  @media ${device.desktop}{
+    padding:0 ${externalPadding.desktop};
+  }
 `
 
 const HeroBg = styled.div`
@@ -62,7 +81,6 @@ const VideoBg = styled.video`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-rows:4fr 1fr;
   grid-template-areas:'TextArea'
                       'ButtonArea';
   height:100vh;
@@ -72,7 +90,7 @@ const Grid = styled.div`
 const TextArea = styled.div`
   display:flex;
   grid-area:TextArea;
-  align-items:center;
+  align-items:end;
   justify-content:center;
   z-index:999;
 `
@@ -80,6 +98,12 @@ const TextArea = styled.div`
 const H1 = styled.h1`
   font-size:1.4rem;
   text-align:center;
+  @media ${device.mobileL}{
+    font-size:2rem;
+  }
+  @media ${device.laptopL}{
+    font-size:2.5rem;
+  }
 `
 
 const Magenta = styled.span`

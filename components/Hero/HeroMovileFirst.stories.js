@@ -15,5 +15,6 @@ Default.args = {
   english: false,
   engButtonText: 'Contact',
   buttonText: 'Contacto',
-  contactUrl: '#!'
+  contactUrl: '#!',
+  big: false,
 }
